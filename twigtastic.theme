@@ -35,6 +35,12 @@ function twigtastic_preprocess_page(&$vars) {
 /**
  * Implements template_preprocess_field().
  */
+function twigtastic_preprocess_field(&$vars) {
+  // If the view mode is "excerpt" use <h3> for the field labels. Otherwise use <h2>.
+  $vars['heading'] = ($vars['element']['#view_mode'] == 'excerpt') ? 'h3' : 'h2';
+ 
+  $vars['classes_array'][] = drupal_html_class('is-excerpt');
+ 
 
-
+}
  
