@@ -14,3 +14,39 @@
         {% if page.header %}
         {{ page.header }}
         {% endif %}
+        
+ <!-- Featured Wrapper -->
+			<div id="features-wrapper">
+				<!-- Featured -->
+					<section id="features" class="container">
+						<header>
+							<h2><strong></strong></h2>
+						</header>			
+						<div class="row">
+							<div class="4u">								
+						    <section>
+                  {% if page.triptych_first %}
+                  {{ page.triptych_first }}
+                  {% endif %}
+								</section>
+							</div>				
+						  <div class="4u">
+     		      <section>
+                  {% if page.triptych_middle %}
+                  {{ page.triptych_middle }}
+                  {% endif %}
+								</section>
+							</div>														
+							<div class="4u">
+     		        <section>
+                  {% if page.triptych_last %}
+                  {{ page.triptych_last }}
+                  {% endif %}
+								</section>
+							</div>
+						</div>
+				  <ul class="actions">
+				    <li><a href="#" class="button button-icon fa fa-file">Yes, Tell Me More</a></li>
+				  </ul>
+				</section>
+			</div>
