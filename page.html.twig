@@ -64,3 +64,43 @@
 			</div>
 			
 			
+			
+			
+		  <!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+
+				<!-- Footer -->
+					<div id="footer" class="container">
+						<header>
+							<h2>Questions or comments? <strong>Get in touch:</strong></h2>
+						</header>
+            <br /><br /><br /><!-- shhh -->						
+						<div class="row">
+							<div class="6u">
+								<section>
+ 									{% if page.footer %}
+                  {{ page.footer }}
+                  {% endif %}
+								</section>
+							</div>
+							
+							<div class="6u">
+								<section>
+								 	{% if page.footer2 %}
+                  {{ page.footer2 }}
+                  {% endif %}
+
+								</section>
+							</div>
+						</div>
+					</div>
+
+				<!-- Fin -->
+					<div id="copyright" class="container">
+						<ul><li>Here Be Dragons</li></ul>
+					</div>
+
+			</div>
+
+	</body>
+</html>
