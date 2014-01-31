@@ -5,15 +5,18 @@ package: Core
 version: VERSION
 core: 8.x
 regions:
+  banner: Banner
   breadcrumb: Breadcrumb
+  content: Content
+  excerpt: Excerpt
+  footer: Footer
+  footer2: 'Footer 2'
   header: Header
   help: Help
   messages: Messages
-  content: Content
+  ofnote: 'Of note'
   triptych_first: 'Triptych first'
   triptych_middle: 'Triptych middle'
   triptych_last: 'Triptych last'
-  footer: Footer
-  
 
 
