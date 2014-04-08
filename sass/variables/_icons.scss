@@ -1,0 +1,19 @@
+
+
+// Using Font Awesome Temporarily, will replace with icomoon fonts.
+@import "../font-awesome/variables";
+
+// Overrides.
+$fa-font-path: "../font/font-awesome";
+$fa-css-prefix: "fa";
+
+// Duplciated from _core.scss to prevent extra styles when extended.
+.fa-icon-core {
+	display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

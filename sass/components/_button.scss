@@ -1,0 +1,50 @@
+
+/* Buttons */
+
+.button {
+  position: relative;
+  display: inline-block;
+  background: #ed786a;
+  color: #fff !important;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: 0;
+  font-size: 1em;
+  box-shadow: 0.125em 0.175em 0 0 rgba(0,0,0,0.125);
+  font-weight: 600;
+  @include transition(all 0.25s ease-in-out);
+  text-align: center;
+
+  font-size: 0.85em;
+  letter-spacing: 2px;
+  padding: 0.85em 2.75em 0.85em 2.75em;
+}
+
+
+  .button.fa:before {
+    position: relative;
+    padding-right: 0.75em;
+    opacity: 0.5;
+    top: 0.05em;
+  }
+
+  .button:hover {
+    background: #fd887a;
+  }
+
+  .button:active {
+    background: #ed786a;
+  }
+
+  .button-alt {
+    background: #878787;
+  }
+
+    .button-alt:hover {
+      background: #979797;
+    }
+
+    .button-alt:active {
+      background: #878787;
+    }
+

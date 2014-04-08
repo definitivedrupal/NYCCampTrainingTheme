@@ -1,0 +1,8 @@
+// Using this name because singularity is duplicating output.
+%pie-clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

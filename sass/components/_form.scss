@@ -1,0 +1,59 @@
+
+/* Forms */
+
+form label {
+  display: block;
+}
+
+form input.text,
+form select,
+form textarea {
+  -webkit-appearance: none;
+  display: block;
+  border: 0;
+  background: #e8e8e8;
+  width: 100%;
+  box-shadow: inset 2px 2px 0px 0px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding: 0.75em 1em 0.75em 1em;
+  @include transition(background-color 0.25s ease-in-out);
+}
+
+  form input.text:hover,
+  form select:hover,
+  form textarea:hover {
+  }
+
+  form input.text:focus,
+  form select:focus,
+  form textarea:focus {
+    background: #f0f0f0;
+  }
+
+  form textarea {
+    min-height: 11em;
+  }
+
+  form .formerize-placeholder {
+    color: #555 !important;
+  }
+
+  form ::-webkit-input-placeholder {
+    color: #555 !important;
+  }
+
+  form :-moz-placeholder {
+    color: #555 !important;
+  }
+
+  form ::-moz-placeholder {
+    color: #555 !important;
+  }
+
+  form :-ms-input-placeholder {
+    color: #555 !important;
+  }
+
+  form ::-moz-focus-inner {
+    border: 0;
+  }

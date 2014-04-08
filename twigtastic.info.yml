@@ -4,6 +4,8 @@ description: This is a twigtastic theme!
 package: Core
 version: VERSION
 core: 8.x
+
+# Regions
 regions:
   banner: Banner
   breadcrumb: Breadcrumb
@@ -19,6 +21,9 @@ regions:
   triptych_middle: 'Triptych middle'
   triptych_last: 'Triptych last'
 
-Stylesheets:
+# Stylesheets
+stylesheets:
   all:
-  - css/style.css
+    - css/main.css
+  print:
+    - css/print.css

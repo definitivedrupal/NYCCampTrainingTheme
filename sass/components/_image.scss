@@ -1,0 +1,39 @@
+/* Images */
+
+.image {
+  display: inline-block;
+  border: solid 6px #ebebeb !important;
+  @include transition(opacity 0.25s ease-in-out);
+}
+
+a.image:hover {
+  opacity: 0.9;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+}
+
+.image-full {
+  display: block;
+  width: 100%;
+  margin: 0 0 3.5em 0;
+}
+
+.image-left {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+  position: relative;
+  top: 0.5em;
+}
+
+.image-centered {
+  display: block;
+  margin: 0 0 2em 0;
+}
+
+.image-centered img {
+  margin: 0 auto;
+  width: auto;
+}

@@ -1,46 +1,4 @@
 <?php
-
 /**
- * hook_preprocess_page implementation.
- *
+ * Put your preprocess functions here.
  */
-function twigtastic_preprocess_page(&$vars) {
- $vars['twigtastic_css'] = array(
-  '#attached' => array(
-       'css' => array(
-        drupal_get_path('theme', 'twigtastic') . '/css/skel-noscript.css' => array(),
-        drupal_get_path('theme', 'twigtastic') . '/css/style.css' => array(),
-        drupal_get_path('theme', 'twigtastic') . '/css/style-desktop.css' => array(),
-        drupal_get_path('theme', 'twigtastic') . '/css/style-1000px.css' => array(),
-        drupal_get_path('theme', 'twigtastic') . '/css/style-mobile.css' => array(),
-        ),
-    ),
-  );
-  
-  $vars['twigtastic_js'] = array(
-    '#attached' => array(
-      'js' => array(
-        drupal_get_path('theme', 'twigtastic') . '/js/config.js' => array(),
-        drupal_get_path('theme', 'twigtastic') . '/js/html5shiv.js' => array(),
-        drupal_get_path('theme', 'twigtastic') . '/js/jquery.dropotron.min.js' => array(),
-        drupal_get_path('theme', 'twigtastic') . '/js/jquery.min.js' => array(),
-        drupal_get_path('theme', 'twigtastic') . '/js/skel-panels.min.js' => array(),
-        drupal_get_path('theme', 'twigtastic') . '/js/skel.min.js' => array(),
-       ),
-    ),
-  ); 
-}
-
-
-/**
- * Implements template_preprocess_field().
- */
-function twigtastic_preprocess_field(&$vars) {
-  // If the view mode is "excerpt" use <h3> for the field labels. Otherwise use <h2>.
-  $vars['heading'] = ($vars['element']['#view_mode'] == 'excerpt') ? 'h3' : 'h2';
- 
-  $vars['classes_array'][] = drupal_html_class('is-excerpt');
- 
-
-}
- 

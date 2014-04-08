@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Print styling
+ *
+ * We provide some sane print styling.
+ */
+
+
+/* Underline all links */
+a:link,
+a:visited {
+  text-decoration: underline !important;
+}

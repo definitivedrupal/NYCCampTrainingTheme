@@ -1,0 +1,28 @@
+
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 $vert-spacing-unit 1em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: $vert-spacing-unit;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 $vert-spacing-unit $vert-spacing-unit;
+}

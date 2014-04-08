@@ -1,0 +1,11 @@
+img, media {
+  max-width: 100%;
+  height: auto !important; // important for editor putting dimensions.
+  vertical-align: top;
+}
+
+video {
+  max-width: 100%;
+}
+
+

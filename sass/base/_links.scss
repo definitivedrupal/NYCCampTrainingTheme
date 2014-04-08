@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+  @include transition(color .3s ease-in-out);
+  color: $primary-color;
+
+  &:focus {
+    outline: none; // Taken care of with the hover.
+  }
+
+	&:focus,
+  &:hover,
+  &:active {
+		color: tint($primary-color, 50%);
+  }
+}

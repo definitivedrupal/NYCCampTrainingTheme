@@ -1,0 +1,244 @@
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather:300,700|Raleway:500,700);
+
+
+/**
+ * $BASE-TYPOGRAPHY
+ */
+html {
+  font-family: $base-font;
+  font-size: $base-font-size;
+  line-height: 1.3125;
+  color: $text-color;
+  font-weight: 400;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/**
+ * $STYLES
+ */
+em, i {
+  font-style: italic;
+  font-weight: 400;
+}
+
+strong, b {
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+/**
+ * $HEADINGS
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+  font-style: normal;
+  font-weight: 400;
+  strong, b {
+    font-weight: 700;
+  }
+  em, i {
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include rhythm(0, 0, 0, 0.2);
+  color: $dark-grey;
+  font-family: $header-font;
+
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+
+  a,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $primary-color;
+  }
+  @include transition(font-size 0.3s ease-out);
+}
+
+h1 {
+  @include font-size(42px);
+  line-height: 1em;
+}
+
+h2 {
+  @include font-size(24px);
+  text-transform: uppercase;
+  color: $dark-grey;
+}
+
+h3 {
+  @include font-size(21px);
+  color: lighten(#5A5A5C, 20%);
+}
+
+h4 {
+  @include font-size(18px);
+}
+
+h5 {
+  @include font-size(16px);
+}
+
+h6 {
+  @include font-size(14px);
+  color: #5A5A5C;
+}
+
+/**
+ * $PARAGRAPHS
+ */
+p,
+%p {
+  margin: 0;
+  @include rhythm(0, 0, 0, 1);
+}
+p + img {
+  float: left;
+  margin-right: $horz-spacing-unit;
+}
+
+/**
+ * $QUOTES
+ */
+blockquote {
+  @extend %p;
+  @include rhythm(0, 1, 1, 1);
+  padding: 0 1.5em;
+
+  @include rhythm-borders(1px);
+  @include apply-side-rhythm-border(left, 10px);
+  font-style: italic;
+  color: $primary-color;
+
+  p {
+    margin: 0;
+  }
+}
+
+q {
+  font-style: italic;
+}
+
+/**
+ * $MARKS
+ */
+mark,
+.marker {
+  text-decoration: none;
+  padding: 0.1em 0.5em;
+  background: lighten($blue, 20%);
+  color: #fff;
+  @include font-size(12px);
+  text-transform: capitalize;
+
+  @include border-radius(10px);
+}
+
+
+
+// From original Twiggy/Twigtastic
+
+
+  // body,input,textarea,select {
+  //   // font-family: 'Source Sans Pro';
+  //   // font-weight: 300;
+  //   // color: #777;
+  // }
+
+  // h1,h2,h3,h4,h5,h6 {
+  //   font-weight: 600;
+  //   text-transform: uppercase;
+  //   color: #F00;
+  // }
+
+  //   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  //     color: #F00;
+  //     text-decoration: none;
+  //     border: 0;
+  //   }
+
+  // a {
+  //   color: #666;
+  //   text-decoration: none;
+  //   border-bottom: solid 1px #ddd;
+  //   transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+  // }
+
+  //   a strong {
+  //     transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+  //   }
+
+  //   a:hover {
+  //     color: #ed786a;
+  //     border-bottom-color: rgba(255,255,255,0);
+  //   }
+
+  //   a:hover strong {
+  //     color: #ed786a;
+  //   }
+
+  // strong, b {
+  //   font-weight: 600;
+  //   color: #666;
+  // }
+
+  // em, i {
+  //   font-style: italic;
+  // }
+
+  // sub {
+  //   position: relative;
+  //   top: 0.5em;
+  //   font-size: 0.8em;
+  // }
+
+  // sup {
+  //   position: relative;
+  //   top: -0.5em;
+  //   font-size: 0.8em;
+  // }
+
+  // hr {
+  //   border: 0;
+  //   border-top: solid 1px #ddd;
+  // }
+
+  // blockquote {
+  //   border-left: solid 0.5em #ddd;
+  //   padding: 1em 0 1em 2em;
+  //   font-style: italic;
+  // }
+
+  // p {
+  //   text-align: justify;
+  // }
+
+  // p, ul, ol, dl, table, blockquote {
+  //   margin-bottom: 2em;
+  // }
+
+  // br.clear {
+  //   clear: both;
+  // }
+
+

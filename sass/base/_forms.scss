@@ -1,0 +1,29 @@
+select,
+input,
+textarea {
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+fieldset {
+  margin-left: 0;
+  margin-right: 0;
+  padding: ($vert-spacing-unit / 2) $horz-spacing-unit $vert-spacing-unit $horz-spacing-unit;
+
+  border-color: #eee;
+}
+
+legend {
+  @include font-size(18px);
+  padding: 0 0.8em;
+  color: $grey;
+}
+
+// Normalize Overrides
+input[type="search"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

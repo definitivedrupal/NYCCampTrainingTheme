@@ -1,0 +1,143 @@
+{#
+/**
+* @file Page template for the Twigtastic theme
+*/
+#}
+<!-- Header Wrapper -->
+<div id="header-wrapper">
+
+  <!-- Header -->
+  <div id="header" class="container">
+    {% if page.header %}
+    {{ page.header }}
+    {% endif %}
+
+    <!-- Featured Wrapper -->
+    <div id="features-wrapper">
+      <!-- Featured -->
+        <section id="features" class="container">
+          <header>
+            <h2><strong></strong></h2>
+          </header>
+          <div class="row">
+            <div class="4u">
+              <section>
+                {% if page.triptych_first %}
+                {{ page.triptych_first }}
+                {% endif %}
+              </section>
+            </div>
+            <div class="4u">
+            <section>
+                {% if page.triptych_middle %}
+                {{ page.triptych_middle }}
+                {% endif %}
+              </section>
+            </div>
+            <div class="4u">
+              <section>
+                {% if page.triptych_last %}
+                {{ page.triptych_last }}
+                {% endif %}
+              </section>
+            </div>
+          </div>
+        <ul class="actions">
+          <li><a href="#" class="button button-icon fa fa-file">Yes, Tell Me More</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Banner Wrapper -->
+    <div id="banner-wrapper">
+      <div class="inner">
+        <!-- Banner -->
+          <section id="banner" class="container">
+            {% if page.banner %}
+            {{ page.banner }}
+            {% endif %}
+          </section>
+      </div>
+    </div>
+
+      <!-- Main Wrapper -->
+    <div id="main-wrapper">
+
+      <!-- Main -->
+        <div id="main" class="container">
+          <div class="row">
+
+            <!-- Content -->
+              <div id="content" class="8u">
+                {% if page.content %}
+                {{ page.content }}
+                {% endif %}
+              </div>
+
+            <!-- Sidebar -->
+              <div id="sidebar" class="4u">
+
+                <!-- Excerpts -->
+                  <section>
+                    {% if page.excerpt %}
+                    {{ page.excerpt }}
+                    {% endif %}
+                  </section>
+
+
+                <!-- Highlights -->
+                  <section>
+                    <ul class="divided">
+                      <li>
+                        <!-- Highlight -->
+                          <article class="is-highlight">
+                           {% if page.ofnote %}
+                           {{ page.ofnote }}
+                           {% endif %}
+                          </article>
+                      </li>
+                    </ul>
+                  </section>
+
+              </div>
+
+          </div>
+        </div>
+
+    </div>
+
+  <!-- Footer Wrapper -->
+  <div id="footer-wrapper">
+
+    <!-- Footer -->
+      <div id="footer" class="container">
+        <header>
+          <h2>Questions or comments? <strong>Get in touch:</strong></h2>
+        </header>
+        <br /><br /><br /><!-- shhh -->
+        <div class="row">
+          <div class="6u">
+            <section>
+              {% if page.footer %}
+              {{ page.footer }}
+              {% endif %}
+            </section>
+          </div>
+
+          <div class="6u">
+            <section>
+              {% if page.footer2 %}
+              {{ page.footer2 }}
+              {% endif %}
+
+            </section>
+          </div>
+        </div>
+      </div>
+
+  <!-- Fin -->
+  <div id="copyright" class="container">
+    <ul><li>Here Be Dragons</li></ul>
+  </div>
+
+</div>
