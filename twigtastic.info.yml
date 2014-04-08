@@ -20,6 +20,5 @@ regions:
   triptych_last: 'Triptych last'
 
 Stylesheets:
-	all: 
-	- css/style.css
-
+  all:
+  - css/style.css
