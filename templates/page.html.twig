@@ -27,9 +27,7 @@
           {% endif %}
       {% endif %}
 
-      {% if page.header %}
-        {{ page.header }}
-      {% endif %}
+      {{ page.header }}
     </div>
   </header>
 
@@ -41,23 +39,17 @@
       <div class="row">
         <div class="span-4">
           <section>
-            {% if page.triptych_first %}
-              {{ page.triptych_first }}
-            {% endif %}
+            {{ page.triptych_first }}
           </section>
         </div>
         <div class="span-4">
           <section>
-            {% if page.triptych_middle %}
-              {{ page.triptych_middle }}
-            {% endif %}
+            {{ page.triptych_middle }}
           </section>
         </div>
         <div class="span-4">
           <section>
-            {% if page.triptych_last %}
-              {{ page.triptych_last }}
-            {% endif %}
+            {{ page.triptych_last }}
           </section>
         </div>
       </div>
@@ -71,9 +63,7 @@
   <div class="l-banner-wrapper">
     <div class="inner">
       <section class="l-banner container">
-        {% if page.banner %}
-          {{ page.banner }}
-        {% endif %}
+        {{ page.banner }}
       </section>
     </div>
   </div>
@@ -82,25 +72,19 @@
     <div class="l-main container">
       <div class="row">
         <article class="l-content span-8">
-          {% if page.content %}
           {{ page.content }}
-          {% endif %}
         </article>
 
         <div class="l-sidebar span-4">
           <section>
-            {% if page.excerpt %}
-              {{ page.excerpt }}
-            {% endif %}
+            {{ page.excerpt }}
           </section>
 
           <section>
             <ul class="divided">
               <li>
                 <article class="is-highlight">
-                  {% if page.ofnote %}
-                    {{ page.ofnote }}
-                  {% endif %}
+                  {{ page.ofnote }}
                 </article>
               </li>
             </ul>
@@ -119,17 +103,13 @@
       <div class="row">
         <div class="span-6">
           <section>
-            {% if page.footer %}
-              {{ page.footer }}
-            {% endif %}
+            {{ page.footer }}
           </section>
         </div>
 
         <div class="span-6">
           <section>
-            {% if page.footer2 %}
-              {{ page.footer2 }}
-            {% endif %}
+            {{ page.footer2 }}
           </section>
         </div>
       </div>
