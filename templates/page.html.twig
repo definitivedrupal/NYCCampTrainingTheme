@@ -4,139 +4,136 @@
 */
 #}
 <!-- Header Wrapper -->
-<div id="header-wrapper">
+<div class="l-header-wrapper">
 
   <!-- Header -->
-  <div id="header" class="container">
+  <div class="l-header container">
     {% if page.header %}
-    {{ page.header }}
+      {{ page.header }}
     {% endif %}
 
     <!-- Featured Wrapper -->
-    <div id="features-wrapper">
+    <div class="l-features-wrapper">
       <!-- Featured -->
-        <section id="features" class="container">
+        <section class="l-features container">
           <header>
-            <h2><strong></strong></h2>
+
           </header>
           <div class="row">
             <div class="4u">
               <section>
                 {% if page.triptych_first %}
-                {{ page.triptych_first }}
+                  {{ page.triptych_first }}
                 {% endif %}
               </section>
             </div>
             <div class="4u">
-            <section>
+              <section>
                 {% if page.triptych_middle %}
-                {{ page.triptych_middle }}
+                  {{ page.triptych_middle }}
                 {% endif %}
               </section>
             </div>
             <div class="4u">
               <section>
                 {% if page.triptych_last %}
-                {{ page.triptych_last }}
+                  {{ page.triptych_last }}
                 {% endif %}
               </section>
             </div>
           </div>
+
         <ul class="actions">
-          <li><a href="#" class="button button-icon fa fa-file">Yes, Tell Me More</a></li>
+          <li><a href="# button button-icon fa fa-file">Yes, Tell Me More</a></li>
         </ul>
+
       </section>
     </div>
 
     <!-- Banner Wrapper -->
-    <div id="banner-wrapper">
+    <div class="l-banner-wrapper">
       <div class="inner">
         <!-- Banner -->
-          <section id="banner" class="container">
+          <section class="l-banner container">
             {% if page.banner %}
-            {{ page.banner }}
+              {{ page.banner }}
             {% endif %}
           </section>
       </div>
     </div>
 
       <!-- Main Wrapper -->
-    <div id="main-wrapper">
+    <div class="l-main-wrapper">
 
       <!-- Main -->
-        <div id="main" class="container">
+        <div class="l-main container">
           <div class="row">
 
             <!-- Content -->
-              <div id="content" class="8u">
+              <div class="l-content 8u">
                 {% if page.content %}
                 {{ page.content }}
                 {% endif %}
               </div>
 
             <!-- Sidebar -->
-              <div id="sidebar" class="4u">
+              <div class="l-sidebar 4u">
 
                 <!-- Excerpts -->
-                  <section>
-                    {% if page.excerpt %}
+                <section>
+                  {% if page.excerpt %}
                     {{ page.excerpt }}
-                    {% endif %}
-                  </section>
-
+                  {% endif %}
+                </section>
 
                 <!-- Highlights -->
-                  <section>
-                    <ul class="divided">
-                      <li>
-                        <!-- Highlight -->
-                          <article class="is-highlight">
-                           {% if page.ofnote %}
-                           {{ page.ofnote }}
-                           {% endif %}
-                          </article>
-                      </li>
-                    </ul>
-                  </section>
-
+                <section>
+                  <ul class="divided">
+                    <li>
+                      <!-- Highlight -->
+                        <article class="is-highlight">
+                          {% if page.ofnote %}
+                            {{ page.ofnote }}
+                          {% endif %}
+                        </article>
+                    </li>
+                  </ul>
+                </section>
               </div>
-
           </div>
         </div>
-
     </div>
 
   <!-- Footer Wrapper -->
-  <div id="footer-wrapper">
+  <div class="l-footer-wrapper">
 
     <!-- Footer -->
-      <div id="footer" class="container">
-        <header>
-          <h2>Questions or comments? <strong>Get in touch:</strong></h2>
-        </header>
-        <br /><br /><br /><!-- shhh -->
-        <div class="row">
-          <div class="6u">
-            <section>
-              {% if page.footer %}
+    <div class="l-footer container">
+      <header>
+        <h2>Questions or comments? <strong>Get in touch:</strong></h2>
+      </header>
+
+      <div class="row">
+        <div class="6u">
+          <section>
+            {% if page.footer %}
               {{ page.footer }}
-              {% endif %}
-            </section>
-          </div>
+            {% endif %}
+          </section>
+        </div>
 
-          <div class="6u">
-            <section>
-              {% if page.footer2 %}
+        <div class="6u">
+          <section>
+            {% if page.footer2 %}
               {{ page.footer2 }}
-              {% endif %}
-
-            </section>
-          </div>
+            {% endif %}
+          </section>
         </div>
       </div>
+    </div>
 
   <!-- Fin -->
-  <div id="copyright" class="container">
+  <div class="l-copyright container">
     <ul><li>Here Be Dragons</li></ul>
   </div>
 

@@ -6,19 +6,18 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-}
 
-/* Modifiers */
-
-  .container.small {
+  /* Modifiers */
+  &.small {
     max-width: 900px;
   }
 
-  .container.big {
+  &.big {
     width: 100%;
     max-width: 1500px;
     min-width: 1200px;
   }
+}
 
 /*********************************************************************************/
 /* Grid
@@ -155,22 +154,18 @@ body {
 }
 
 /* Sections/Articles */
+section,
+article {
+  margin-bottom: 3em;
 
-  section,
-  article {
-    margin-bottom: 3em;
-  }
-
-  section > :last-child,
-  article > :last-child {
+  & > *:last-child {
     margin-bottom: 0;
   }
 
-  section:last-child,
-  article:last-child {
+  &:last-child {
     margin-bottom: 0;
   }
-
+}
 
 /*********************************************************************************/
 /* Section/Article Types                                                         */
@@ -192,17 +187,13 @@ body {
 /* Wrappers                                                                      */
 /*********************************************************************************/
 
-#header-wrapper {
+.l-header-wrapper {
   position: relative;
   background: #fff;
   text-align: center;
 }
 
-  #header-wrapper p {
-    text-align: center;
-  }
-
-#banner-wrapper {
+.l-banner-wrapper {
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -213,56 +204,49 @@ body {
   box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5, inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
 }
 
-  #banner-wrapper .inner {
+  .l-banner-wrapper .inner {
     background: image-url('banner.jpg');
     background-size: cover;
   }
 
-  #banner-wrapper p {
+  .l-banner-wrapper p {
     text-align: center;
   }
 
-#features-wrapper {
+.l-features-wrapper {
   position: relative;
   overflow: hidden;
   background: #fff;
   text-align: center;
 }
 
-  #features-wrapper p {
-    text-align: center;
-  }
-
-  #features-wrapper .actions {
+  .l-features-wrapper .actions {
     margin-top: 1.25em;
   }
 
-#main-wrapper {
+.l-main-wrapper {
   position: relative;
   overflow: hidden;
   background: #fff;
 }
 
-#footer-wrapper {
+.l-footer-wrapper {
   position: relative;
   overflow: hidden;
   border-top: solid 2px #e5e5e5;
   background: #f0f0f0;
 }
 
-  #footer-wrapper form input.text,
-  #footer-wrapper form select,
-  #footer-wrapper form textarea {
+  .l-footer-wrapper form input.text,
+  .l-footer-wrapper form select,
+  .l-footer-wrapper form textarea {
     background: #f7f7f7;
-  }
-
-    #footer-wrapper form input.text:focus,
-    #footer-wrapper form select:focus,
-    #footer-wrapper form textarea:focus {
+    &:focus {
       background: #fff;
     }
+  }
 
-  #footer-wrapper h2 {
+  .l-footer-wrapper h2 {
     text-align: center;
   }
 
@@ -270,49 +254,48 @@ body {
 /* Header                                                                        */
 /*********************************************************************************/
 
-#header {
+.l-header {
   position: relative;
   border-bottom: solid 2px #e5e5e5;
   box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
-}
 
-  #header h1 {
-    // font-family: 'Arvo';
-    // font-weight: 700;
+
+  h1 {
     color: #ed786a;
     text-shadow: 0.05em 0.075em 0 rgba(0,0,0,0.1);
-  }
-
-    #header h1 a {
+    a {
       border: 0;
     }
+  }
 
-  #header p {
+  p {
     text-transform: uppercase;
     font-weight: 400;
     color: #888;
   }
+}
+
 
 /*********************************************************************************/
 /* Features                                                                      */
 /*********************************************************************************/
 
-#features {}
+.l-features {}
 
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
 
-#banner {
+.l-banner {
   position: relative;
   text-transform: uppercase;
 }
 
-  #banner p {
+  .l-banner p {
     font-weight: 400;
   }
 
-  #banner strong {
+  .l-banner strong {
     color: inherit;
   }
 
@@ -320,14 +303,14 @@ body {
 /* Content                                                                       */
 /*********************************************************************************/
 
-  #content > section,
-  #content > article {
+  .l-content > section,
+  .l-content > article {
     border-top: solid 2px #e5e5e5;
     box-shadow: inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
   }
 
-    #content > section:first-child,
-    #content > article:first-child {
+    .l-content > section:first-child,
+    .l-content > article:first-child {
       border-top: 0;
       box-shadow: none;
     }
@@ -335,14 +318,14 @@ body {
 /*********************************************************************************/
 /* Sidebar                                                                       */
 /*********************************************************************************/
-  #sidebar > section,
-  #sidebar > article {
+  .l-sidebar > section,
+  .l-sidebar > article {
     border-top: solid 2px #e5e5e5;
     box-shadow: inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
   }
 
-    #sidebar > section:first-child,
-    #sidebar > article:first-child {
+    .l-sidebar > section:first-child,
+    .l-sidebar > article:first-child {
       border-top: 0;
       box-shadow: none;
     }
@@ -351,7 +334,7 @@ body {
 /* Copyright                                                                     */
 /*********************************************************************************/
 
-#copyright {
+.l-copyright {
   border-top: solid 2px #e5e5e5;
   text-align: center;
 }
@@ -377,19 +360,19 @@ body {
 /* Wrappers                                                                      */
 /*********************************************************************************/
 
-#features-wrapper {
+.l-features-wrapper {
   padding: 6em 0 6em 0;
 }
 
-#banner-wrapper {
+.l-banner-wrapper {
   padding: 3em 0 3em 0;
 }
 
-#main-wrapper {
+.l-main-wrapper {
   padding: 6em 0 6em 0;
 }
 
-#footer-wrapper {
+.l-footer-wrapper {
   padding: 6em 0 8em 0;
 }
 
@@ -397,37 +380,35 @@ body {
 /* Header                                                                        */
 /*********************************************************************************/
 
-#header {
-  // padding: 14em 0 7em 0;
-}
-
-  #header h1 {
+.l-header {
+  h1 {
     font-size: 3em;
     letter-spacing: 13px;
   }
 
-  #header p {
+  p {
     margin: 2.5em 0 0 0;
     font-size: 0.85em;
     letter-spacing: 3px;
   }
+}
 
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
 
-#banner {
+.l-banner {
   padding: 10em 0 10em 0;
-}
 
-  #banner p {
+
+  p {
     font-size: 2em;
     line-height: 1.5em;
     letter-spacing: 4px;
   }
 
-  #banner:before,
-  #banner:after {
+  &:before,
+  &:after {
     content: '';
     display: block;
     position: absolute;
@@ -439,54 +420,49 @@ body {
     opacity: 0.15;
   }
 
-  #banner:before {
+  &:before {
     left: 0;
   }
 
-  #banner:after {
+  &:after {
     right: 0;
     @include scaleX(-1);
   }
+}
 
 /*********************************************************************************/
 /* Content                                                                       */
 /*********************************************************************************/
 
-#content > section,
-#content > article {
+.l-content > section,
+.l-content > article {
   margin: 5em 0 0 0;
   padding: 5em 0 0 0;
-}
-
-#content > section:first-child,
-#content > article:first-child {
-  margin: 0;
-  padding: 0;
+  &:first-child {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /*********************************************************************************/
 /* Sidebar                                                                       */
 /*********************************************************************************/
 
-#sidebar > section,
-#sidebar > article {
+.l-sidebar > section,
+.l-sidebar > article {
   margin: 5em 0 0 0;
   padding: 5em 0 0 0;
-}
-
-#sidebar > section:first-child,
-#sidebar > article:first-child {
-  margin: 0;
-  padding: 0;
+  &:first-child {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /*********************************************************************************/
 /* Copyright                                                                     */
 /*********************************************************************************/
 
-#copyright {
+.l-copyright {
   margin-top: 6em;
   padding-top: 4em;
 }
-
-
