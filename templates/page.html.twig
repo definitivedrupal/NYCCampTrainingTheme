@@ -31,89 +31,101 @@
     </div>
   </header>
 
-  <div class="l-features-wrapper">
-    <section class="l-features container">
-      <header>
+  {% if page.triptych_first or page.triptych_middle or page.triptych_last %}
+    <div class="l-features-wrapper">
+      <section class="l-features container">
+        <header>
 
-      </header>
-      <div class="row">
-        <div class="span-4">
-          <section>
-            {{ page.triptych_first }}
-          </section>
+        </header>
+        <div class="row">
+          <div class="span-4">
+            <section>
+              {{ page.triptych_first }}
+            </section>
+          </div>
+          <div class="span-4">
+            <section>
+              {{ page.triptych_middle }}
+            </section>
+          </div>
+          <div class="span-4">
+            <section>
+              {{ page.triptych_last }}
+            </section>
+          </div>
         </div>
-        <div class="span-4">
-          <section>
-            {{ page.triptych_middle }}
-          </section>
-        </div>
-        <div class="span-4">
-          <section>
-            {{ page.triptych_last }}
-          </section>
-        </div>
-      </div>
 
-      <ul class="actions">
-        <li><a href="#contact" class="button button-icon fa fa-file">Yes, Tell Me More</a></li>
-      </ul>
-    </section>
-  </div>
-
-  <div class="l-banner-wrapper">
-    <div class="inner">
-      <section class="l-banner container">
-        {{ page.banner }}
+        <ul class="actions">
+          <li><a href="#contact" class="button button-icon fa fa-file">Yes, Tell Me More</a></li>
+        </ul>
       </section>
     </div>
-  </div>
+  {% endif %}
+
+  {% if page.banner %}
+    <div class="l-banner-wrapper">
+      <div class="inner">
+        <section class="l-banner container">
+          {{ page.banner }}
+        </section>
+      </div>
+    </div>
+  {% endif %}
 
   <div class="l-main-wrapper body">
     <div class="l-main container">
       <div class="row">
-        <article class="l-content span-8">
-          {{ page.content }}
-        </article>
+        {% if page.content %}
+          <article class="l-content span-8">
+            {{ page.content }}
+          </article>
+        {% endif %}
 
         <div class="l-sidebar span-4">
-          <section>
-            {{ page.excerpt }}
-          </section>
+          {% if page.excerpt %}
+            <section>
+              {{ page.excerpt }}
+            </section>
+          {% endif %}
 
-          <section>
-            <ul class="divided">
-              <li>
-                <article class="is-highlight">
-                  {{ page.ofnote }}
-                </article>
-              </li>
-            </ul>
-          </section>
+          {% if page.ofnote %}
+            <section>
+              <ul class="divided">
+                <li>
+                  <article class="is-highlight">
+                    {{ page.ofnote }}
+                  </article>
+                </li>
+              </ul>
+            </section>
+          {% endif %}
         </div>
       </div>
     </div>
   </div>
 
   <div class="l-footer-wrapper body">
-    <div class="l-footer container" id="contact">
-      <header>
-        <h2>Questions or comments? <strong>Get in touch:</strong></h2>
-      </header>
+    {% if page.footer or page.footer2 %}
+      <div class="l-footer container" id="contact">
+        <header>
+          <h2>Questions or comments? <strong>Get in touch:</strong></h2>
+        </header>
 
-      <div class="row">
-        <div class="span-6">
-          <section>
-            {{ page.footer }}
-          </section>
-        </div>
+        <div class="row">
+          <div class="span-6">
+            <section>
+              {{ page.footer }}
+            </section>
+          </div>
 
-        <div class="span-6">
-          <section>
-            {{ page.footer2 }}
-          </section>
+          <div class="span-6">
+            <section>
+              {{ page.footer2 }}
+            </section>
+          </div>
         </div>
       </div>
-    </div>
+    {% endif %}
 
     <div class="l-copyright container">
       <ul><li>Here Be Dragons</li></ul>
