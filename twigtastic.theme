@@ -4,3 +4,15 @@
  * @file
  * Put your preprocess functions here.
  */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for node.html.twig.
+ */
+function twigtastic_theme_suggestions_node_alter(&$suggestions, $variables) {
+  // Add template suggestions based on the current view mode.
+  // Based off of this pending core patch: https://drupal.org/node/1503464
+  $node = $variables['elements']['#node'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  $suggestions[] = 'node__' . $sanitized_view_mode;
+  $suggestions[] = 'node__' . $node->bundle() . '__' . $sanitized_view_mode;
+}
