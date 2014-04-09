@@ -30,33 +30,31 @@
     </div>
   </header>
 
-  {% if page.triptych_first or page.triptych_middle or page.triptych_last %}
-    <div class="l-features-wrapper">
-      <section class="l-features container">
-        <div class="row">
-          <div class="span-4">
-            <section>
-              {{ page.triptych_first }}
-            </section>
-          </div>
-          <div class="span-4">
-            <section>
-              {{ page.triptych_middle }}
-            </section>
-          </div>
-          <div class="span-4">
-            <section>
-              {{ page.triptych_last }}
-            </section>
-          </div>
+  <div class="l-features-wrapper">
+    <section class="l-features container">
+      <div class="row">
+        <div class="span-4">
+          <section>
+            {{ page.triptych_first }}
+          </section>
         </div>
+        <div class="span-4">
+          <section>
+            {{ page.triptych_middle }}
+          </section>
+        </div>
+        <div class="span-4">
+          <section>
+            {{ page.triptych_last }}
+          </section>
+        </div>
+      </div>
 
-        <ul class="actions">
-          <li><a href="#contact" class="button button-icon fa fa-file">Yes, Tell Me More</a></li>
-        </ul>
-      </section>
-    </div>
-  {% endif %}
+      <ul class="actions">
+        <li><a href="#contact" class="button button-icon fa fa-file">Yes, Tell Me More</a></li>
+      </ul>
+    </section>
+  </div>
 
   {% if page.banner %}
     <div class="l-banner-wrapper">
