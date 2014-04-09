@@ -23,127 +23,31 @@
 /* Grid
 /*********************************************************************************/
 
+/* Rows */
+.row {
+  @extend %pie-clearfix;
+}
 
 /* Cells */
-
-  .\31 2u { width: 100% }
-  .\31 1u { width: 91.6666666667% }
-  .\31 0u { width: 83.3333333333% }
-  .\39 u { width: 75% }
-  .\38 u { width: 66.6666666667% }
-  .\37 u { width: 58.3333333333% }
-  .\36 u { width: 50% }
-  .\35 u { width: 41.6666666667% }
-  .\34 u { width: 33.3333333333% }
-  .\33 u { width: 25% }
-  .\32 u { width: 16.6666666667% }
-  .\31 u { width: 8.3333333333% }
-  .\-11u { margin-left: 91.6666666667% }
-  .\-10u { margin-left: 83.3333333333% }
-  .\-9u { margin-left: 75% }
-  .\-8u { margin-left: 66.6666666667% }
-  .\-7u { margin-left: 58.3333333333% }
-  .\-6u { margin-left: 50% }
-  .\-5u { margin-left: 41.6666666667% }
-  .\-4u { margin-left: 33.3333333333% }
-  .\-3u { margin-left: 25% }
-  .\-2u { margin-left: 16.6666666667% }
-  .\-1u { margin-left: 8.3333333333% }
-
-  .row > * {
-    padding: 50px 0 0 50px;
-    float: left;
+.span4 {
+  @include float-span(4);
+  &:last-child {
+    @include float-span(4, 'last');
   }
-
-  .row + .row > * {
-    padding-top: 50px;
+}
+.span6 {
+  @include float-span(6);
+  &:last-child {
+    @include float-span(6, 'last');
   }
-
-  .row {
-    margin-left: -50px;
+}
+.span8 {
+  @include float-span(8);
+  &:last-child {
+    @include float-span(8, 'last');
   }
+}
 
-/* Rows */
-
-  .row:after {
-    @extend %pie-clearfix;
-  }
-
-  .row:first-child > * {
-    padding-top: 0;
-  }
-
-  .row > * {
-    padding-top: 0;
-  }
-
-  /* Modifiers */
-
-    /* Flush */
-
-      .row.flush {
-        margin-left: 0;
-      }
-
-      .row.flush > * {
-        padding: 0 !important;
-      }
-
-    /* Quarter */
-
-      .row.quarter > * {
-        padding: 12.5px 0 0 12.5px;
-      }
-
-      .row.quarter + .row.quarter > * {
-        padding-top: 12.5px;
-      }
-
-      .row.quarter {
-        margin-left: -12.5px;
-      }
-
-    /* Half */
-
-      .row.half > * {
-        padding: 25px 0 0 25px;
-      }
-
-      .row.half + .row.half > * {
-        padding-top: 25px;
-      }
-
-      .row.half {
-        margin-left: -25px;
-      }
-
-    /* One and (a) Half */
-
-      .row.oneandhalf > * {
-        padding: 75px 0 0 75px;
-      }
-
-      .row.oneandhalf + .row.oneandhalf > * {
-        padding-top: 75px;
-      }
-
-      .row.oneandhalf {
-        margin-left: -75px;
-      }
-
-    /* Double */
-
-      .row.double > * {
-        padding: 100px 0 0 100px;
-      }
-
-      .row.double + .row.double > * {
-        padding-top: 100px;
-      }
-
-      .row.double {
-        margin-left: -100px;
-      }
 
 /*********************************************************************************/
 /* Basic                                                                         */
@@ -187,11 +91,7 @@ article {
 /* Wrappers                                                                      */
 /*********************************************************************************/
 
-.l-header-wrapper {
-  position: relative;
-  background: #fff;
-  text-align: center;
-}
+
 
 .l-banner-wrapper {
   position: relative;
@@ -255,12 +155,24 @@ article {
 /*********************************************************************************/
 
 .l-header {
+  padding: ($vert-spacing-unit * 3) 0 $vert-spacing-unit;
+
+  p {
+    margin: 2.5em 0 0 0;
+    font-size: 0.85em;
+    letter-spacing: 3px;
+  }
+
   position: relative;
+  background: #fff;
+  text-align: center;
+
   border-bottom: solid 2px #e5e5e5;
   box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
 
 
   h1 {
+    @include font-size(60px);
     color: #ed786a;
     text-shadow: 0.05em 0.075em 0 rgba(0,0,0,0.1);
     a {
@@ -273,6 +185,10 @@ article {
     font-weight: 400;
     color: #888;
   }
+}
+
+.site-name {
+  margin: 0.5em 0;
 }
 
 
@@ -376,22 +292,6 @@ article {
   padding: 6em 0 8em 0;
 }
 
-/*********************************************************************************/
-/* Header                                                                        */
-/*********************************************************************************/
-
-.l-header {
-  h1 {
-    font-size: 3em;
-    letter-spacing: 13px;
-  }
-
-  p {
-    margin: 2.5em 0 0 0;
-    font-size: 0.85em;
-    letter-spacing: 3px;
-  }
-}
 
 /*********************************************************************************/
 /* Banner                                                                        */

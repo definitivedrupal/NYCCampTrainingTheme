@@ -1,7 +1,7 @@
 a {
-  text-decoration: none;
-  @include transition(color .3s ease-in-out);
+  @include transition(all .3s ease-in-out);
   color: $primary-color;
+  text-decoration: none;
 
   &:focus {
     outline: none; // Taken care of with the hover.
@@ -12,4 +12,14 @@ a {
   &:active {
 		color: tint($primary-color, 50%);
   }
+}
+
+// Avoid changing toolbar and buttons.
+// Medium.com inspired underlines.
+.body a {
+  background-image: linear-gradient(to bottom, #ccc 50%, #fff 50%);
+  background-position: 0 1.1em;
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  text-decoration: none;
 }

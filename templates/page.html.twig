@@ -1,120 +1,123 @@
 {#
 /**
-* @file Page template for the Twigtastic theme
-*/
+ * @file
+ *
+ * Page template for the Twigtastic theme
+ */
 #}
-<!-- Header Wrapper -->
-<div class="l-header-wrapper">
+<div class="l-page">
+  <header class="l-header">
+    <div class="container">
+      {% if logo %}
+        <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
+          <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
+        </a>
+      {% endif %}
 
-  <!-- Header -->
-  <div class="l-header container">
-    {% if page.header %}
-      {{ page.header }}
-    {% endif %}
+      {% if site_name or site_slogan %}
+          {# Use h1 when the content title is empty #}
+          {% if site_name %}
+            <h1 class="site-name">
+              <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+            </h1>
+          {% endif %}
 
-    <!-- Featured Wrapper -->
-    <div class="l-features-wrapper">
-      <!-- Featured -->
-        <section class="l-features container">
-          <header>
+          {% if site_slogan %}
+            <h2 class="site-slogan">{{ site_slogan }}</h2>
+          {% endif %}
+      {% endif %}
 
-          </header>
-          <div class="row">
-            <div class="4u">
-              <section>
-                {% if page.triptych_first %}
-                  {{ page.triptych_first }}
-                {% endif %}
-              </section>
-            </div>
-            <div class="4u">
-              <section>
-                {% if page.triptych_middle %}
-                  {{ page.triptych_middle }}
-                {% endif %}
-              </section>
-            </div>
-            <div class="4u">
-              <section>
-                {% if page.triptych_last %}
-                  {{ page.triptych_last }}
-                {% endif %}
-              </section>
-            </div>
-          </div>
-
-        <ul class="actions">
-          <li><a href="# button button-icon fa fa-file">Yes, Tell Me More</a></li>
-        </ul>
-
-      </section>
+      {% if page.header %}
+        {{ page.header }}
+      {% endif %}
     </div>
+  </header>
 
-    <!-- Banner Wrapper -->
-    <div class="l-banner-wrapper">
-      <div class="inner">
-        <!-- Banner -->
-          <section class="l-banner container">
-            {% if page.banner %}
-              {{ page.banner }}
+  <div class="l-features-wrapper">
+    <section class="l-features container">
+      <header>
+
+      </header>
+      <div class="row">
+        <div class="span-4">
+          <section>
+            {% if page.triptych_first %}
+              {{ page.triptych_first }}
             {% endif %}
           </section>
+        </div>
+        <div class="span-4">
+          <section>
+            {% if page.triptych_middle %}
+              {{ page.triptych_middle }}
+            {% endif %}
+          </section>
+        </div>
+        <div class="span-4">
+          <section>
+            {% if page.triptych_last %}
+              {{ page.triptych_last }}
+            {% endif %}
+          </section>
+        </div>
+      </div>
+
+      <ul class="actions">
+        <li><a href="#contact" class="button button-icon fa fa-file">Yes, Tell Me More</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="l-banner-wrapper">
+    <div class="inner">
+      <section class="l-banner container">
+        {% if page.banner %}
+          {{ page.banner }}
+        {% endif %}
+      </section>
+    </div>
+  </div>
+
+  <div class="l-main-wrapper body">
+    <div class="l-main container">
+      <div class="row">
+        <article class="l-content span-8">
+          {% if page.content %}
+          {{ page.content }}
+          {% endif %}
+        </article>
+
+        <div class="l-sidebar span-4">
+          <section>
+            {% if page.excerpt %}
+              {{ page.excerpt }}
+            {% endif %}
+          </section>
+
+          <section>
+            <ul class="divided">
+              <li>
+                <article class="is-highlight">
+                  {% if page.ofnote %}
+                    {{ page.ofnote }}
+                  {% endif %}
+                </article>
+              </li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
+  </div>
 
-      <!-- Main Wrapper -->
-    <div class="l-main-wrapper">
-
-      <!-- Main -->
-        <div class="l-main container">
-          <div class="row">
-
-            <!-- Content -->
-              <div class="l-content 8u">
-                {% if page.content %}
-                {{ page.content }}
-                {% endif %}
-              </div>
-
-            <!-- Sidebar -->
-              <div class="l-sidebar 4u">
-
-                <!-- Excerpts -->
-                <section>
-                  {% if page.excerpt %}
-                    {{ page.excerpt }}
-                  {% endif %}
-                </section>
-
-                <!-- Highlights -->
-                <section>
-                  <ul class="divided">
-                    <li>
-                      <!-- Highlight -->
-                        <article class="is-highlight">
-                          {% if page.ofnote %}
-                            {{ page.ofnote }}
-                          {% endif %}
-                        </article>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-          </div>
-        </div>
-    </div>
-
-  <!-- Footer Wrapper -->
-  <div class="l-footer-wrapper">
-
-    <!-- Footer -->
-    <div class="l-footer container">
+  <div class="l-footer-wrapper body">
+    <div class="l-footer container" id="contact">
       <header>
         <h2>Questions or comments? <strong>Get in touch:</strong></h2>
       </header>
 
       <div class="row">
-        <div class="6u">
+        <div class="span-6">
           <section>
             {% if page.footer %}
               {{ page.footer }}
@@ -122,7 +125,7 @@
           </section>
         </div>
 
-        <div class="6u">
+        <div class="span-6">
           <section>
             {% if page.footer2 %}
               {{ page.footer2 }}
@@ -132,9 +135,9 @@
       </div>
     </div>
 
-  <!-- Fin -->
-  <div class="l-copyright container">
-    <ul><li>Here Be Dragons</li></ul>
+    <div class="l-copyright container">
+      <ul><li>Here Be Dragons</li></ul>
+    </div>
   </div>
 
 </div>

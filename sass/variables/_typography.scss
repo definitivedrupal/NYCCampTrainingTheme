@@ -1,7 +1,12 @@
+// Font families.
+$header-font-family: 'Raleway', Helvetica, Arial, sans-serif;
+$base-font-family: 'Merriweather', Georgia, Times, serif;
 
-$base-font: 'Merriweather', Georgia, Times, serif;
-$header-font: 'Raleway', Helvetica, Arial, sans-serif;
-
+// The base font size.
 $base-font-size: 16px;
+
+// Base line height.
 $base-line-height: $base-font-size * 1.3125;
 
+// Rhythm unit (Compass vertical rhythm).
+$rhythm-unit: "rem";

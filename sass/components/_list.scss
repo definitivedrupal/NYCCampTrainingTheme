@@ -24,11 +24,11 @@ ul.links {
     border-left: solid 1px #d0d0d0;
     padding-left: 1em;
     margin-left: 1em;
-  }
-
-  ul.links li:first-child {
-    margin-left: 0;
-    padding-left: 0;
+    &:first-child {
+      margin-left: 0;
+      padding-left: 0;
+      border: 0;
+    }
   }
 
 ul.actions {
