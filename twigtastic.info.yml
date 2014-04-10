@@ -1,7 +1,6 @@
 name: Twigtastic
 type: theme
 description: This is a twigtastic theme!
-package: Core
 version: VERSION
 core: 8.x
 
@@ -12,12 +11,12 @@ regions:
   content: Content
   excerpt: Excerpt
   footer: Footer
-  footer2: 'Footer 2'
+  footer2: Footer 2
   header: Header
-  ofnote: 'Of note'
-  triptych_first: 'Triptych first'
-  triptych_middle: 'Triptych middle'
-  triptych_last: 'Triptych last'
+  ofnote: Of note
+  triptych_first: Triptych first
+  triptych_middle: Triptych middle
+  triptych_last: Triptych last
 
 # Stylesheets
 stylesheets:
