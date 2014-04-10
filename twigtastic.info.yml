@@ -25,3 +25,11 @@ stylesheets:
     - css/main.css
   print:
     - css/print.css
+
+# Override stylesheets
+stylesheets-override:
+  - css/toolbar.theme.css
+
+# Remove stylesheets
+stylesheets-remove:
+  - system.theme.css
