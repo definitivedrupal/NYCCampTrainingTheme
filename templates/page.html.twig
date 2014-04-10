@@ -101,23 +101,25 @@
   <div class="l-footer-wrapper body">
     {% if page.footer or page.footer2 %}
       <div class="l-footer container" id="contact">
-        <header>
-          <h2>Questions or comments? <strong>Get in touch:</strong></h2>
-        </header>
+        {% block footer %}
+          <header>
+            <h2>Questions or comments? <strong>Get in touch:</strong></h2>
+          </header>
 
-        <div class="row">
-          <div class="span-6">
-            <section>
-              {{ page.footer }}
-            </section>
-          </div>
+          <div class="row">
+            <div class="span-6">
+              <section>
+                {{ page.footer }}
+              </section>
+            </div>
 
-          <div class="span-6">
-            <section>
-              {{ page.footer2 }}
-            </section>
+            <div class="span-6">
+              <section>
+                {{ page.footer2 }}
+              </section>
+            </div>
           </div>
-        </div>
+        {% endblock footer %}
       </div>
     {% endif %}
 
