@@ -68,6 +68,25 @@
 
   <div class="l-main-wrapper body">
     <div class="l-main container">
+      {# Logic and control structure examples. #}
+      {% set text %}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae elementum est.
+      {% endset %}
+
+      {% set truth = true %}
+      {% if truth %}
+        Truth: <p>{{ text }}</p>
+      {% endif %}
+
+      {% set list = ['many', 'piles', 'of things'] %}
+      {% if list %}
+        <ul>
+          {% for item in list %}
+            <li>{{ item }} ({{ loop.index }} of {{ loop.length }})</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
       <div class="row">
         {% if page.content %}
           <article class="l-content span-8">
