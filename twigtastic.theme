@@ -1,6 +1,23 @@
 <?php
 
+use Drupal\Core\Template\Attribute;
+
 /**
  * @file
  * Put your preprocess functions here.
  */
+
+
+function twigtastic_preprocess_page(&$variables) {
+
+	$attributes = array(
+		'id' => 'top',
+		'checked' => TRUE,
+		'class' => array('button', 'fa', 'fa-file'),
+	);
+	$variables['all_attributes'] = new Attribute($attributes);
+	$variables['split_class_attributes'] = new Attribute($attributes);
+	$variables['manipulate_attributes'] = new Attribute($attributes);
+
+
+}
