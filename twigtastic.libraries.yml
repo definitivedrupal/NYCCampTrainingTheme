@@ -1,0 +1,7 @@
+fittext:
+  version: 1.2
+  js:
+    js/jquery.fittext.js: {}
+    js/fittext.js: {}
+  dependencies:
+    - core/jquery

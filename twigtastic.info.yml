@@ -25,3 +25,9 @@ stylesheets:
     - css/main.css
   print:
     - css/print.css
+
+# Libraries
+# This will work in alpha 11 to attach a library to every page:
+#
+# libraries:
+#   - twigtastic/fittext
