@@ -1,129 +1,27 @@
-{#
-/**
- * @file
- * Page template for the Twigtastic theme
- */
-#}
-<div class="l-page">
-  <header class="l-header">
-    <div class="container">
-      {% if logo %}
-        <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
-          <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-        </a>
-      {% endif %}
+<p> null_var: {{ null_var }}</p>
+<p> string_var: {{ string_var }}</p>
+<p> numeric_var: {{ numeric_var }}</p>
+<p> boolean_true: {{ boolean_true }}</p>
+<p> boolean_false: {{ boolean_false }}</p>
 
-      {% if site_name or site_slogan %}
-        {# Use h1 when the content title is empty #}
-        {% if site_name %}
-          <h1 class="site-name">
-            <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-          </h1>
-        {% endif %}
+<h3>Access Array Items</h3>
+<p> array_var.0: {{ array_var.0 }}</p>
+<p> array_var[1]: {{ array_var[1] }}</p>
+<ul>
+  {% for item in array_var %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>
 
-        {% if site_slogan %}
-          <h2 class="site-slogan">{{ site_slogan }}</h2>
-        {% endif %}
-      {% endif %}
+<h3>Accessing Associative Array by Key</h3>
+<p> By pro: {{ assoc_array.city }}</p>
+<p> Array Access: {{ assoc_array['building'] }}</p>
+<ul>
+  {% for item in assoc_array %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>
 
-      {{ page.header }}
-    </div>
-  </header>
-
-  <div class="l-features-wrapper">
-    <section class="l-features container">
-      <div class="row">
-        <div class="span-4">
-          <section>
-            {{ page.triptych_first }}
-          </section>
-        </div>
-        <div class="span-4">
-          <section>
-            {{ page.triptych_middle }}
-          </section>
-        </div>
-        <div class="span-4">
-          <section>
-            {{ page.triptych_last }}
-          </section>
-        </div>
-      </div>
-
-      <ul class="actions">
-        <li><a href="#contact" class="button button-icon fa fa-file">Yes, Tell Me More</a></li>
-      </ul>
-    </section>
-  </div>
-
-  {% if page.banner %}
-    <div class="l-banner-wrapper">
-      <div class="inner">
-        <section class="l-banner container">
-          {{ page.banner }}
-        </section>
-      </div>
-    </div>
-  {% endif %}
-
-  <div class="l-main-wrapper body">
-    <div class="l-main container">
-      <div class="row">
-        {% if page.content %}
-          <article class="l-content span-8">
-            {{ page.content }}
-          </article>
-        {% endif %}
-
-        <div class="l-sidebar span-4">
-          {% if page.excerpt %}
-            <section>
-              {{ page.excerpt }}
-            </section>
-          {% endif %}
-
-          {% if page.ofnote %}
-            <section>
-              <ul class="divided">
-                <li>
-                  <article class="is-highlight">
-                    {{ page.ofnote }}
-                  </article>
-                </li>
-              </ul>
-            </section>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="l-footer-wrapper body">
-    {% if page.footer or page.footer2 %}
-      <div class="l-footer container" id="contact">
-        <header>
-          <h2>Questions or comments? <strong>Get in touch:</strong></h2>
-        </header>
-
-        <div class="row">
-          <div class="span-6">
-            <section>
-              {{ page.footer }}
-            </section>
-          </div>
-
-          <div class="span-6">
-            <section>
-              {{ page.footer2 }}
-            </section>
-          </div>
-        </div>
-      </div>
-    {% endif %}
-
-    <div class="l-copyright container">
-      <ul><li>Here Be Dragons</li></ul>
-    </div>
-  </div>
-
-</div>
+<h3>Accessing Objects</h3>
+<p> object.html: {{ object.html }}</p>
+<p> object.render_array: {{ object.render_array }}</p>

@@ -4,3 +4,33 @@
  * @file
  * Put your preprocess functions here.
  */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function twigtastic_preprocess_page(&$variables) {
+	$variables['null_var'] = NULL;
+	$variables['string_var'] = 'I <h2><3</h2> NY Drupal Camp';
+	$variables['numeric_var'] = 9001;
+	$variables['boolean_false'] = FALSE;
+	$variables['boolean_true'] = TRUE;
+	$variables['array_var'] = array(
+		1,
+		2,
+		3,
+	);
+	$variables['assoc_array'] = array(
+		'city' => 'New York',
+		'building' => 'United Nations',
+	);
+	$variables['object'] = new stdClass();
+	$variables['object']->html = "<blockquote>Smooth seas do not make skillful sailors.</blockquote>";
+	$variables['object']->render_array = array(
+		'#theme' => 'item_list',
+		'#items' => array(
+			'Satisfaction lies in the effort, ',
+			'not in the attainment, ',
+			'full effort is full victory.',
+		),
+	);
+}
